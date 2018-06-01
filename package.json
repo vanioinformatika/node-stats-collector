@@ -1,0 +1,42 @@
+{
+  "name": "@vanioinformatika/stats-collector",
+  "version": "0.1.0",
+  "description": "Collector for runtime stats of a task",
+  "main": "StatsCollector.js",
+  "scripts": {
+    "coverage": "nyc --reporter=lcov npm test",
+    "test": "standard | snazzy && mocha --exit \"*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanioinformatika/node-stats-collector.git"
+  },
+  "keywords": [
+    "runtime",
+    "stats"
+  ],
+  "standard": {
+    "global": [
+      "describe",
+      "it",
+      "before",
+      "after",
+      "beforeEach"
+    ],
+    "ignore": []
+  },
+  "author": "Gyula Szalai <gyszalai@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanioinformatika/node-stats-collector/issues"
+  },
+  "homepage": "https://github.com/vanioinformatika/node-stats-collector#readme",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-eventemitter": "^1.1.1",
+    "mocha": "5.2.0",
+    "nyc": "12.0.1",
+    "snazzy": "7.1.1",
+    "standard": "11.0.1"
+  }
+}
