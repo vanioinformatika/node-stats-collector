@@ -4,7 +4,7 @@
   "description": "Collector for runtime stats of a task",
   "main": "StatsCollector.js",
   "scripts": {
-    "coverage": "nyc --reporter=lcov npm test",
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
     "test": "standard | snazzy && mocha --exit \"*.spec.js\""
   },
   "repository": {
