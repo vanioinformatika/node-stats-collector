@@ -25,6 +25,16 @@ describe('StatsCollector', () => {
       expect(statistics.getTotalErrorCounter()).to.equal(errorCtr)
       expect(statistics.getTotalSuccessCounter()).to.equal(0)
     })
+    it('should accept multiple error objects', function () {
+      const statistics = new StatsCollector(maxErrorCount, timeWindowMillis, errorHistorySize)
+      const errors = [new Error('dummy1'), new Error('dummy2'), new Error('dummy3')]
+      statistics.error(errors)
+      expect(statistics.getRecentErrors().length).to.equal(errors.length)
+      expect(statistics.getErrorHistory().length).to.equal(errors.length)
+      expect(statistics.getTotalCounter()).to.equal(errors.length)
+      expect(statistics.getTotalErrorCounter()).to.equal(errors.length)
+      expect(statistics.getTotalSuccessCounter()).to.equal(0)
+    })
     it('should not emit maxErrorCountReached', function () {
       this.timeout(3000)
       const statistics = new StatsCollector(maxErrorCount, timeWindowMillis, errorHistorySize)
