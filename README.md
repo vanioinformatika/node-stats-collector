@@ -33,7 +33,7 @@ try {
 
 // publish runtime stats via HTTP
 app.get('/stats', (req, res) => {
-  res.json(statsCollector.toJSON(true) // return error history in the response too
+  res.json(statsCollector.toJSON(true)) // return error history in the response too
 })
 
 ```
