@@ -15,11 +15,20 @@ statsCollector.on('maxErrorCountReached', () => {
   console.log('Maximum error count reached, something should be done...')
 })
 
+...
+
 try {
   doSomeProcessing()
   statsCollector.success() // processing was successful
 } catch (err) {
   statsCollector.error(err) // an error occured during processing
 }
+
+...
+
+// publish runtime stats via HTTP
+app.get('/stats', (req, res) => {
+  res.json(statsCollector.toJSON(true) // return error history in the response too
+})
 
 ```
