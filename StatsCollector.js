@@ -34,7 +34,7 @@ class StatsCollector extends EventEmitter {
   }
 
   /**
-   * Signals failed processing with one ore more errors
+   * Registers failed processing with one ore more errors
    * @param {Object|Array.<Object>} errors One ore more errors that occured during execution
    */
   error (errors) {
@@ -59,7 +59,7 @@ class StatsCollector extends EventEmitter {
   }
 
   /**
-   * Signals successful processing
+   * Registers successful processing
    */
   success () {
     this.totalCounter++
