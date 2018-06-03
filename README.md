@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/vanioinformatika/node-stats-collector.svg?branch=master)](https://travis-ci.org/vanioinformatika/node-stats-collector)
+[![Coverage Status](https://coveralls.io/repos/github/vanioinformatika/node-stats-collector/badge.svg)](https://coveralls.io/github/vanioinformatika/node-stats-collector)
+[![NPM Version](https://img.shields.io/npm/v/@vanioinformatika/stats-collector.svg)](https://www.npmjs.com/package/@vanioinformatika/stats-collector)
+[![npm](https://img.shields.io/npm/l/express.svg)]()
+
 # node-stats-collector
 Collector for runtime stats of a task
 

@@ -5,7 +5,10 @@
   "main": "StatsCollector.js",
   "scripts": {
     "coverage": "nyc npm test && nyc report --reporter=lcov",
-    "test": "standard | snazzy && mocha --exit \"*.spec.js\""
+    "coverage:ci": "npm run coverage && nyc report --reporter=text-lcov | coveralls",
+    "test": "standard | snazzy && mocha --exit \"*.spec.js\"",
+    "preversion": "git push && npm test",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

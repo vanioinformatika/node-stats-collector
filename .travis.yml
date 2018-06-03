@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 'node'
+  - '6'
+
+script: npm test
+
+jobs:
+  include:
+    - stage: code quality
+      script: npm run coverage:ci
