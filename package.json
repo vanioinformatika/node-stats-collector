@@ -1,6 +1,6 @@
 {
   "name": "@vanioinformatika/stats-collector",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Collector for runtime stats of a task",
   "main": "StatsCollector.js",
   "scripts": {
